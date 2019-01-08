@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+instapy = "*"
+
+[dev-packages]
+"flake8" = "*"
+"flake8-import-order" = "*"
+
+[requires]
+python_version = "3.6"
+
+[scripts]
+start          = "gunicorn --preload -w 12 -b 0.0.0.0:10015 rocketship.wsgi"
+lint           = "python -m flake8"
