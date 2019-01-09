@@ -17,4 +17,4 @@ with smart_run(session):
     session.set_skip_users(skip_private=False)
     #popeye_followers = session.grab_followers(username=USERNAME, amount="full", live_match=True, store_locally=True)
 
-    session.unfollow_users(amount=200, InstapyFollowed=(True, "nonfollowers"), style="FIFO", unfollow_after=86400, sleep_delay=60) # people that havent followed back
+    session.unfollow_users(amount=50000, InstapyFollowed=(True, "nonfollowers"), style="FIFO", unfollow_after=86400, sleep_delay=60) # unfollow_after=86400

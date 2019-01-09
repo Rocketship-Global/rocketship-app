@@ -23,4 +23,4 @@ with smart_run(session):
                                        min_following=5)
     
     session.set_skip_users(skip_private=False, skip_no_profile_pic=True, skip_business=True)
-    session.follow_likers ([USER1, USER2], photos_grab_amount = 2, follow_likers_per_photo = 50, randomize=False, sleep_delay=60, interact=False)
+    session.follow_likers ([USER1, USER2], photos_grab_amount = 2, follow_likers_per_photo = 50000, randomize=False, sleep_delay=60, interact=False)

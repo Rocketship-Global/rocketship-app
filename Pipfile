@@ -19,4 +19,6 @@ lint           = "python -m flake8"
 follow         = "python features/follow.py"
 unfollow       = "python features/unfollow.py"
 follow-like    = "python features/follow-like.py"
+like-tagged    = "python features/like-tagged.py"
+follow-unfollow = "python features/follow-unfollow.py"
 
