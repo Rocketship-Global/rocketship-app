@@ -20,26 +20,23 @@ session = InstaPy(username=USERNAME, password=PASSWORD)
 
 # let's go! :>
 with smart_run(session):
-    # settings
-    # session.set_user_interact(amount=3, randomize=True, percentage=100, media='Photo')
+    session.set_quota_supervisor(enabled=True, 
+                              sleep_after=["follows"], 
+                              sleepyhead=True, 
+                              stochastic_flow=True, 
+                              notify_me=True,
+                              peak_follows=(80, 900))
+
     session.set_relationship_bounds (enabled=True,
-                                       max_followers=3000,
-                                       max_following=900,
+                                       max_followers=999999,
+                                       max_following=999999,
                                        min_followers=5,
                                        min_following=5)
-    
-    # interact with users:
 
-    # session.set_simulation(enabled=False)
+    session.set_user_interact(amount=2, randomize=False, percentage=30, media='Photo')
     session.set_do_like(enabled=True, percentage=100)
-    # session.set_ignore_users([])
-    # session.set_do_comment(enabled=True, percentage=35)
-    # session.set_do_follow(enabled=True, percentage=25, times=1)
-    # session.set_comments([])
-    # session.set_ignore_if_contains([])
-    # session.set_action_delays(enabled=True, like=40)
+    session.set_skip_users(skip_private=False, skip_no_profile_pic=True, skip_business=True)
+    session.follow_likers ([USER1, USER2], photos_grab_amount = 2, follow_likers_per_photo = 50, randomize=False, sleep_delay=60, interact=False)
 
-    # manage private users
-    session.set_skip_users(skip_private=False)
-    session.follow_likers ([USER1, USER2], photos_grab_amount = 1, follow_likers_per_photo = 100, randomize=False, sleep_delay=60, interact=False)
+
 

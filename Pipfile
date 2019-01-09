@@ -18,4 +18,5 @@ start          = "gunicorn --preload -w 12 -b 0.0.0.0:10015 rocketship.wsgi"
 lint           = "python -m flake8"
 follow         = "python features/follow.py"
 unfollow       = "python features/unfollow.py"
+follow-like    = "python features/follow-like.py"
 
