@@ -16,7 +16,7 @@ with smart_run(session):
     while True:
         print(f"\n\n===================== LOOP: {counter} =====================\n\n")
         session.follow_likers ([USER1], photos_grab_amount = 2, follow_likers_per_photo = 450, randomize=False, sleep_delay=80, interact=False)
-        session.unfollow_users(amount=900, InstapyFollowed=(True, "all"), style="FIFO", sleep_delay=80) # unfollow_after=86400
+        session.unfollow_users(amount=900, allFollowing=True, style="FIFO", sleep_delay=80) # unfollow_after=86400
         counter += 1
         print(f"\n\n===================== END LOOP =====================\n\n")
         
