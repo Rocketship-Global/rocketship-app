@@ -16,4 +16,4 @@ USERNAME = 'theclosetau'
 PASSWORD = 'thecl0s3t'
 USER1 = 'cottonon'
 #USER2 = 'callithelabel'
-# BLACKLIST = ['user1', 'user2']
+BLACKLIST = ['zara', 'cottonon']

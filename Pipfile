@@ -21,4 +21,5 @@ unfollow       = "python features/unfollow.py"
 follow-like    = "python features/follow-like.py"
 like-tagged    = "python features/like-tagged.py"
 follow-unfollow = "python features/follow-unfollow.py"
+remove-followrq = "python features/remove-followrq.py"
 
